@@ -13,13 +13,6 @@ import {
 import { carsReducer } from "./CarSlice";
 import { favoriteReducer } from "./FavoriteSlice";
 
-// export const store = configureStore({
-//   reducer: {
-//     cars: carsReducer,
-//     favorite: favoriteReducer,
-//   },
-// });
-
 const authPersistConfig = {
   key: "favorite",
   storage,
