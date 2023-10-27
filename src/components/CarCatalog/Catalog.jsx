@@ -32,9 +32,9 @@ export function createArrayWithStep(number, step) {
 const cardsPerPage = 12;
 
 const Catalog = ({ cars, fav }) => {
-  const [model, setModel] = useState("");
+  const [ setModel] = useState("");
   const [price, setPrice] = useState("");
-  const [priceStep, setPriceStep] = useState(10); // Додали state для цінового кроку
+  const [ setPriceStep] = useState(10); // Додали state для цінового кроку
   const [startMiles, setStartMiles] = useState("");
   const [endMiles, setEndMiles] = useState("");
 
