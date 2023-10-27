@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/WheelsToRent/static/css/main.b5320759.css",
-    "main.js": "/WheelsToRent/static/js/main.fd91a2f8.js",
+    "main.js": "/WheelsToRent/static/js/main.f7a30583.js",
     "static/js/158.638ef489.chunk.js": "/WheelsToRent/static/js/158.638ef489.chunk.js",
     "static/js/339.7fb0a2d3.chunk.js": "/WheelsToRent/static/js/339.7fb0a2d3.chunk.js",
     "static/js/69.f38fed87.chunk.js": "/WheelsToRent/static/js/69.f38fed87.chunk.js",
     "static/js/32.b2888651.chunk.js": "/WheelsToRent/static/js/32.b2888651.chunk.js",
-    "static/js/788.51c4a9ad.chunk.js": "/WheelsToRent/static/js/788.51c4a9ad.chunk.js",
+    "static/js/788.9ae2f906.chunk.js": "/WheelsToRent/static/js/788.9ae2f906.chunk.js",
     "static/media/Manrope-SemiBold.ttf": "/WheelsToRent/static/media/Manrope-SemiBold.310f108cc524df0e5ffc.ttf",
     "static/media/Manrope-Medium.ttf": "/WheelsToRent/static/media/Manrope-Medium.08894ccb04665d1a9d53.ttf",
     "static/media/Manrope-Regular.ttf": "/WheelsToRent/static/media/Manrope-Regular.a9b9e09fe6b69741f316.ttf",
     "static/media/Manrope-Bold.ttf": "/WheelsToRent/static/media/Manrope-Bold.47f6d7143da9d8c0e480.ttf",
     "index.html": "/WheelsToRent/index.html",
     "main.b5320759.css.map": "/WheelsToRent/static/css/main.b5320759.css.map",
-    "main.fd91a2f8.js.map": "/WheelsToRent/static/js/main.fd91a2f8.js.map",
+    "main.f7a30583.js.map": "/WheelsToRent/static/js/main.f7a30583.js.map",
     "158.638ef489.chunk.js.map": "/WheelsToRent/static/js/158.638ef489.chunk.js.map",
     "339.7fb0a2d3.chunk.js.map": "/WheelsToRent/static/js/339.7fb0a2d3.chunk.js.map",
     "69.f38fed87.chunk.js.map": "/WheelsToRent/static/js/69.f38fed87.chunk.js.map",
     "32.b2888651.chunk.js.map": "/WheelsToRent/static/js/32.b2888651.chunk.js.map",
-    "788.51c4a9ad.chunk.js.map": "/WheelsToRent/static/js/788.51c4a9ad.chunk.js.map"
+    "788.9ae2f906.chunk.js.map": "/WheelsToRent/static/js/788.9ae2f906.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b5320759.css",
-    "static/js/main.fd91a2f8.js"
+    "static/js/main.f7a30583.js"
   ]
 }
