@@ -34,15 +34,16 @@ const cardsPerPage = 12;
 const Catalog = ({ cars, fav }) => {
   // eslint-disable-next-line no-unused-vars
   const [model, setModel] = useState("");
+  // eslint-disable-next-line no-unused-vars
   const [price, setPrice] = useState("");
   // eslint-disable-next-line no-unused-vars
-  const [priceStep, setPriceStep] = useState(10); 
+  const [priceStep, setPriceStep] = useState(10);
   const [startMiles, setStartMiles] = useState("");
   const [endMiles, setEndMiles] = useState("");
-
   const [page, setPage] = useState(1);
   const [filteredCars, setFilteredCars] = useState([]);
   const [selectedBrand, setSelectedBrand] = useState("");
+  const [selectedPrice, setSelectedPrice] = useState("");
 
   const loading = useSelector(getLoading);
 
@@ -61,10 +62,12 @@ const Catalog = ({ cars, fav }) => {
   const clear = () => {
     setModel("");
     setPrice("");
-    setPriceStep(10); 
+    setPriceStep(10);
     setStartMiles("");
     setEndMiles("");
     setFilteredCars(Array.isArray(cars) ? cars : []);
+    setSelectedBrand("");
+    setSelectedPrice("");
   };
 
   const search = (selectedMake, selectedMileage) => {
@@ -75,8 +78,8 @@ const Catalog = ({ cars, fav }) => {
       arr = arr.filter(({ brand }) => brand === selectedBrand);
     }
 
-    if (price !== "") {
-      const priceValue = Number(price);
+    if (selectedPrice !== "") {
+      const priceValue = Number(selectedPrice);
       if (priceValue < minPrice) {
         alert(`Price cannot be less than ${minPrice}!`);
         return;
@@ -106,7 +109,7 @@ const Catalog = ({ cars, fav }) => {
 
     setFilteredCars(arr);
 
-    if (selectedMake !== "" || price !== "" || (startMiles !== "" && endMiles !== "")) {
+    if (selectedMake !== "" || selectedPrice !== "" || (startMiles !== "" && endMiles !== "")) {
       if (arr.length === 0) {
         alert("No cars matching your criteria found.");
       }
@@ -127,11 +130,11 @@ const Catalog = ({ cars, fav }) => {
             <Label>
               <FormName>Car brand</FormName>
               <StyledSelectBrand
-                placeholder="Select a car brand"
+                placeholder={selectedBrand || "Select a car brand"}
                 options={makes}
                 onChange={(selectedOption) => setSelectedBrand(selectedOption.value)}
                 classNamePrefix={"select"}
-                value={selectedBrand}
+                value={makes.find((make) => make.value === selectedBrand) || ''}
               />
             </Label>
             <Label>
@@ -139,9 +142,10 @@ const Catalog = ({ cars, fav }) => {
               <StyledSelectPrice
                 placeholder="To $"
                 options={priceStepOptions}
-                onChange={(selectedOption) => setPrice(selectedOption.value)}
+                onChange={(selectedOption) => setSelectedPrice(selectedOption.value)}
                 classNamePrefix={"select"}
-                value={price}
+                value={priceStepOptions.find((option) => option.value === selectedPrice) || ''}
+                formatOptionLabel={(option) => `To ${option.label}`}
               />
             </Label>
             <Label>
