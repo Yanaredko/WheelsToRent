@@ -75,7 +75,7 @@ const Catalog = ({ cars, fav }) => {
     let arr = Array.isArray(cars) ? [...cars] : [];
 
     if (selectedBrand !== "") {
-      arr = arr.filter(({ brand }) => brand === selectedBrand);
+      arr = arr.filter(({ make }) => make === selectedBrand);
     }
 
     if (selectedPrice !== "") {
