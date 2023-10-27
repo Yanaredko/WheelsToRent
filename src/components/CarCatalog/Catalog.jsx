@@ -32,8 +32,10 @@ export function createArrayWithStep(number, step) {
 const cardsPerPage = 12;
 
 const Catalog = ({ cars, fav }) => {
+  // eslint-disable-next-line no-unused-vars
   const [model, setModel] = useState("");
   const [price, setPrice] = useState("");
+  // eslint-disable-next-line no-unused-vars
   const [priceStep, setPriceStep] = useState(10); 
   const [startMiles, setStartMiles] = useState("");
   const [endMiles, setEndMiles] = useState("");
