@@ -6,7 +6,6 @@ import {
   Backdrop,
   BtnClose,
   CloseIcon,
-  CarImg,
   InfoWrapper,
   MainInfo,
   CarInfo,
