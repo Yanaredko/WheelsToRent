@@ -32,9 +32,9 @@ export function createArrayWithStep(number, step) {
 const cardsPerPage = 12;
 
 const Catalog = ({ cars, fav }) => {
-  const [ setModel] = useState("");
+  const [model, setModel] = useState("");
   const [price, setPrice] = useState("");
-  const [ setPriceStep] = useState(10); // Додали state для цінового кроку
+  const [priceStep, setPriceStep] = useState(10); 
   const [startMiles, setStartMiles] = useState("");
   const [endMiles, setEndMiles] = useState("");
 
@@ -59,22 +59,20 @@ const Catalog = ({ cars, fav }) => {
   const clear = () => {
     setModel("");
     setPrice("");
-    setPriceStep(10); // Скидаємо ціновий крок до значення за замовчуванням
+    setPriceStep(10); 
     setStartMiles("");
     setEndMiles("");
     setFilteredCars(Array.isArray(cars) ? cars : []);
   };
 
-  const search = () => {
+  const search = (selectedMake, selectedMileage) => {
     setPage(1);
     let arr = Array.isArray(cars) ? [...cars] : [];
 
-    // Фільтрація за маркою авто
     if (selectedBrand !== "") {
       arr = arr.filter(({ brand }) => brand === selectedBrand);
     }
 
-    // Фільтрація за ціною
     if (price !== "") {
       const priceValue = Number(price);
       if (priceValue < minPrice) {
@@ -90,8 +88,7 @@ const Catalog = ({ cars, fav }) => {
       });
     }
 
-    // Фільтрація за пробігом
-    if (startMiles !== "" && endMiles !== "") {
+    if (selectedMileage !== "" && endMiles !== "") {
       const startMilesInt = parseInt(startMiles, 10);
       const endMilesInt = parseInt(endMiles, 10);
       if (!Number.isInteger(startMilesInt) || !Number.isInteger(endMilesInt)) {
@@ -107,8 +104,8 @@ const Catalog = ({ cars, fav }) => {
 
     setFilteredCars(arr);
 
-    if (selectedBrand !== "" || price !== "" || (startMiles !== "" && endMiles !== "")) {
-      if (filteredCars.length === 0) {
+    if (selectedMake !== "" || price !== "" || (startMiles !== "" && endMiles !== "")) {
+      if (arr.length === 0) {
         alert("No cars matching your criteria found.");
       }
     }

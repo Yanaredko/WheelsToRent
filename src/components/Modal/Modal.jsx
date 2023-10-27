@@ -10,6 +10,7 @@ import {
   MainInfo,
   CarInfo,
   CarText,
+  CarImg,
   ModelBlue,
   SecondaryInfo,
   SecondaryCarText,
@@ -90,6 +91,7 @@ const Modal = ({
             <CloseIcon />
           </BtnClose>
           <InfoWrapper>
+            <CarImg src={img } alt={make} />
             <MainInfo>
               <CarInfo>
                 <CarText>{make}</CarText>
